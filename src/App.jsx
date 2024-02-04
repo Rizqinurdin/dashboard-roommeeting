@@ -13,6 +13,7 @@ import Reports from './pages/Reports';
 import Setting from './pages/Setting';
 import Dashboard from './user/Dashboard';
 import RoomList from './user/RoomList';
+import Login from './pages/Login';
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
@@ -25,7 +26,8 @@ function App() {
     <Router>
       <div className='grid-container'>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Login />} />
+          <Route path='/dashboard-admin' element={<Home />} />
           <Route path='/header' element={<Header OpenSidebar={OpenSidebar} />} />
           <Route
             path='/sidebar'
